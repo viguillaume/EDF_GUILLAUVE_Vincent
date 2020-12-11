@@ -15,6 +15,21 @@
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="70"></RowDefinition>
         </Grid.RowDefinitions>
-        <ListBox Name="lstCtrl"></ListBox>
+        <TextBlock Text="Gestion EDF" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"></TextBlock>
+        <TextBlock Text="Liste des clients" FontSize="20" Grid.Row="1"></TextBlock>
+        <ListBox Name="lstClient"  Grid.Row="2" Grid.Column="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="50" Text="{Binding identifiant}"></TextBlock>
+                        <TextBlock Width="100" Text="{Binding nom}"></TextBlock>
+                        <TextBlock Width="100" Text="{Binding prenom}"></TextBlock>
+                        <TextBlock Width="100" Text="{Binding ancienReleve}"></TextBlock>
+                        <TextBlock Width="100" Text="{Binding dernierReleve}"></TextBlock>
+                        <TextBlock Width="100" Text="{Binding conso}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

@@ -37,7 +37,7 @@ namespace ProjetEDFWPF
         {
             if(lstCtrl.SelectedItem != null)
             {
-                
+                leCtrl.id = (lstCtrl.SelectedItem as controleur).id;
                 lstClient.ItemsSource = from c in gst.client.ToList()
                                          where c.idcontroleur == leCtrl.id
                                          select new ClientPerso(c.identifiant, c.nom, c.prenom, c.ancienReleve, c.dernierReleve);
